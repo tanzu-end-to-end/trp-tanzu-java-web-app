@@ -16,6 +16,11 @@ public class Application {
 	}
 
 	@Bean
+    public HttpTraceRepository htttpTraceRepository() {
+        return new InMemoryHttpTraceRepository();
+    };
+	
+	@Bean
 	public CommandLineRunner commandLineRunner(ApplicationContext ctx) {
 		return args -> {
 
